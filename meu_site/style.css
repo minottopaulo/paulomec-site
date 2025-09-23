@@ -1,30 +1,54 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    text-align: center;
+/* Reset básico */
+body, h1, h2, p, nav, footer, section {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-nav {
+/* Corpo */
+body {
+    background-color: #f0f0f5;
+    color: #333;
+    text-align: center;
+}
+
+/* Cabeçalho */
+header {
     background-color: #222;
-    padding: 10px;
+    color: #fff;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin-bottom: 10px;
 }
 
 nav a {
-    color: white;
+    color: #ffcc00;
     text-decoration: none;
     margin: 0 15px;
     font-weight: bold;
 }
 
 nav a:hover {
-    color: #ffcc00;
+    color: #fff;
 }
 
-h1 {
-    color: #333;
+/* Seção principal */
+.hero {
+    background-color: #fffbcc;
+    padding: 50px 20px;
+    margin: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Rodapé */
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 15px 0;
     margin-top: 30px;
 }
-
 
