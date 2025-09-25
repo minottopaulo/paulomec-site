@@ -2,17 +2,17 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-@app.route("/")
-def index():
-    return render_template("index.html")
+@app.route('/')
+def home():
+    return render_template('index.html')
 
-@app.route("/servicos")
+@app.route('/servicos')
 def servicos():
-    return render_template("servicos.html")
+    return render_template('servicos.html')
 
-@app.route("/contato")
+@app.route('/contato')
 def contato():
-    return render_template("contato.html")
+    return render_template('contato.html')
 
 if __name__ == "__main__":
     app.run(debug=True)

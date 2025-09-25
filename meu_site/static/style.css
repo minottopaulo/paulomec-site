@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background: url("../static/imagens/fundo.jpg") no-repeat center center fixed;
+    background-size: cover;
+    color: #ffcc00;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.42); /* transparente */
+    color: white;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(5px); /* efeito borrado atrás do header */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.highlight {
+    color: #ffffff;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffcc00;
+}
+
+main {
+    flex: 1;
+    padding: 50px 20px;
+}
+
+main h2 {
+    color: #ffffff;
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+}
+
+.card {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 25px;
+    max-width: 700px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.16);
+    text-align: justify;
+    margin: 20px auto;
+    color: #fff;
+}
+
+/* ====== SERVIÇOS (NOVO LAYOUT) ====== */
+.servicos-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.servico-card {
+    background: rgba(255, 255, 255, 0.15); /* fundo translúcido */
+    border-radius: 12px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, background 0.3s ease;
+    text-align: center;
+}
+
+.servico-card:hover {
+    transform: translateY(-8px);
+    background: rgb(255, 204, 0); /* vermelho destaque */
+}
+
+.servico-card h3 {
+    margin-bottom: 10px;
+    color: #ffcc00;
+    font-size: 18px;
+}
+
+.servico-card p {
+    font-size: 14px;
+    line-height: 1.4;
+    color: #fff;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input,
+form textarea {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(255,255,255,0.6);
+    border-radius: 10px;
+    font-size: 1rem;
+    background-color: rgba(255,255,255,0.2); /* translúcido */
+    color: rgba(0, 0, 0, 0.42); /* texto legível dentro do input */
+}
+
+form input::placeholder,
+form textarea::placeholder {
+    color: rgba(0, 0, 0, 0.24);
+}
+
+form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+form button {
+    background-color: #ffcc00;
+    color: #fff;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #ffcc00;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.44); /* transparente */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    backdrop-filter: blur(5px);
+}
+
+@media (max-width: 768px) {
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .card {
+        max-width: 90%;
+    }
+
+    .servicos-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Contato (cards iguais aos serviços) */
+.contato-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.contato-card {
+    background: rgba(0, 0, 0, 0.78);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.contato-card:hover {
+    transform: scale(1.05);
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.contato-card h3 {
+    margin-bottom: 10px;
+    color: #ffcc00;
+}
+
+.contato-card a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contato-card a:hover {
+    color: #ffcc00;
+}

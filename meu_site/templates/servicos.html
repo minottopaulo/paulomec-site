@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<main>
+    <section id="servicos">
+        <h2>Nossos Serviços</h2>
+        <div class="card">
+
+           <img src="{{ url_for('static', filename='imagens/fundo.jpg') }}" alt="Serviços" class="servico-img">
+
+
+            <ul>
+                <li>🔧 troca de óleo e filtros</li>
+                <li>🔧 revisão preventiva</li>
+                <li>🔧 diagnóstico eletrônico</li>
+                <li>🔧 suspensão e freio</li>
+            </ul>
+        </div>
+    </section>
+</main>
+{% endblock %}
+
